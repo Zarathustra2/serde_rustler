@@ -12,20 +12,7 @@ use crate::types::Animal;
 use rustler::{types::tuple, Encoder, Env, NifResult, Term};
 use serde_rustler::{atoms, from_term, to_term, Deserializer, Error, Serializer};
 
-rustler::init!("Elixir.SerdeRustlerTests", [
-    // json
-    json::decode_json,
-    json::decode_json_dirty,
-    json::encode_json_compact,
-    json::encode_json_compact_dirty,
-    json::encode_json_pretty,
-    json::encode_json_pretty_dirty,
-    // tests
-    readme,
-    test::test,
-    transcode,
-    transcode_dirty,
-]);
+rustler::init!("Elixir.SerdeRustlerTests");
 
 /// Implements the README example.
 #[inline]
